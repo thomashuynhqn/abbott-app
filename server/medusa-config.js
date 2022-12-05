@@ -23,7 +23,7 @@ try {
 
 // CORS when consuming Medusa from admin
 const ADMIN_CORS =
-  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
+  process.env.ADMIN_CORS || "https://abbott-admin.vercel.app/";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "https://abbott-store.vercel.app/";
