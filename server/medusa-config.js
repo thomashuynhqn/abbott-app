@@ -22,18 +22,20 @@ try {
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS =
-  process.env.ADMIN_CORS || "https://abbott-admin.vercel.app/";
+const ADMIN_CORS = process.env.ADMIN_CORS || "https://abbott-admin.vercel.app/";
 
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS || "https://abbott-store.vercel.app/";
 
 // Database URL (here we use a local database called medusa-development)
 const DATABASE_URL =
-  process.env.DATABASE_URL || "postgresql://postgres:QWMHHxa2FD1srlFpCs2J@containers-us-west-133.railway.app:6937/railway";
+  process.env.DATABASE_URL ||
+  "postgresql://postgres:QWMHHxa2FD1srlFpCs2J@containers-us-west-133.railway.app:6937/railway";
 
 // Medusa uses Redis, so this needs configuration as well
-const REDIS_URL = process.env.REDIS_URL || "redis://default:TMyftEOSQwT8V7E1wemW@containers-us-west-138.railway.app:8077";
+const REDIS_URL =
+  process.env.REDIS_URL ||
+  "redis://default:TMyftEOSQwT8V7E1wemW@containers-us-west-138.railway.app:8077";
 
 // Stripe keys
 const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
@@ -56,10 +58,10 @@ const plugins = [
 
 module.exports = {
   projectConfig: {
-    // redis_url: REDIS_URL,
+    redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
-    // database_url: DATABASE_URL,
-    // database_type: "postgres",
+    database_url: DATABASE_URL,
+    database_type: "postgres",
     database_database: "./medusa-db.sql",
     database_type: "sqlite",
     store_cors: STORE_CORS,
