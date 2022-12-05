@@ -1,8 +1,0 @@
-{
-  "baseUrl": "https://abbott-app-production.up.railway.app/",
-  "env": {
-    "codeCoverage": {
-      "url": "/api/__coverage__"
-    }
-  }
-}
