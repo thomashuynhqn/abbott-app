@@ -1,40 +1,40 @@
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/modules/**/*.{js,ts,jsx,tsx}",
-  ],
+  future: {},
+  content: ["./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
     extend: {
-      transitionProperty: {
-        "width": "width",
-        "spacing": 'margin, padding',
+      fontSize: {
+        "2xs": "0.5rem",
       },
       maxWidth: {
-        "8xl": "100rem",
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
       },
-      screens: {
-        "2xsmall": "320px",
-        "xsmall": "512px",
-        "small": "1024px",
-        "medium": "1280px",
-        "large": "1440px",
-        "xlarge": "1680px",
-        "2xlarge": "1920px",
+      maxHeight: {
+        review: "calc(100vh - 10rem)",
       },
-      fontFamily: {
-        sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
-          "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
+      boxShadow: {
+        DEFAULT:
+          "0 2px 5px 0 rgba(60, 66, 87, 0.08), 0 0 0 1px rgba(60, 66, 87, 0.16), 0 1px 1px rgba(0, 0, 0, 0.12)",
+        error:
+          "0 2px 5px 0 rgba(255, 155, 155, 0.08), 0 0 0 1px rgba(255, 155, 155, 0.70), 0 1px 1px rgba(0, 0, 0, 0.12)",
+      },
+      colors: {
+        green: {
+          DEFAULT: "#56FBB1",
+        },
+        blue: {
+          DEFAULT: "#0A3149",
+        },
+        ui: {
+          light: "#F7F7FA",
+          DEFAULT: "#EEF0F5",
+          medium: "#D9DFE8",
+          dark: "#89959C",
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 }
