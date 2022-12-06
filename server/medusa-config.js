@@ -68,4 +68,11 @@ module.exports = {
     admin_cors: ADMIN_CORS,
   },
   plugins,
+  resolve: `medusa-file-cloudinary`,
+  options: {
+    cloud_name: "abbott-media-storage",
+    api_key: "146646238227857",
+    api_secret: "_JHwRMiVCR67ESEZ8kl7E5rXt-Y",
+    secure: true,
+  },
 };
