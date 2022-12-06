@@ -45,7 +45,7 @@ const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
-  `medusa-file-cloudinary`,
+
   // Uncomment to add Stripe support.
   // You can create a Stripe account via: https://stripe.com
   // {
@@ -55,6 +55,15 @@ const plugins = [
   //     webhook_secret: STRIPE_WEBHOOK_SECRET,
   //   },
   // },
+  {
+    resolve: `medusa-file-cloudinary`,
+    options: {
+      cloud_name: "abbott-media-storage",
+      api_key: "146646238227857",
+      api_secret: "_JHwRMiVCR67ESEZ8kl7E5rXt-Y",
+      secure: true,
+    },
+  },
 ];
 
 module.exports = {
@@ -69,11 +78,4 @@ module.exports = {
     admin_cors: ADMIN_CORS,
   },
   plugins,
-  resolve: `medusa-file-cloudinary`,
-  options: {
-    cloud_name: "abbott-media-storage",
-    api_key: "146646238227857",
-    api_secret: "_JHwRMiVCR67ESEZ8kl7E5rXt-Y",
-    secure: true,
-  },
 };
