@@ -1,4 +1,4 @@
-const dotenv = require("dotenv");
+import { config } from "dotenv";
 
 let ENV_FILE_NAME = "";
 switch (process.env.NODE_ENV) {
@@ -18,7 +18,7 @@ switch (process.env.NODE_ENV) {
 }
 
 try {
-  dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
+  config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
@@ -65,7 +65,7 @@ const plugins = [
   },
 ];
 
-module.exports = {
+export default {
   projectConfig: {
     redis_url: REDIS_URL,
     // For more production-like environment install PostgresQL
