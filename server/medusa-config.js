@@ -1,4 +1,4 @@
-import { config } from "dotenv";
+const dotenv = require("dotenv");
 
 let ENV_FILE_NAME = "";
 switch (process.env.NODE_ENV) {
@@ -18,7 +18,7 @@ switch (process.env.NODE_ENV) {
 }
 
 try {
-  config({ path: process.cwd() + "/" + ENV_FILE_NAME });
+  dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
