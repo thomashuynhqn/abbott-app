@@ -38,8 +38,8 @@ const REDIS_URL =
   "redis://default:TMyftEOSQwT8V7E1wemW@containers-us-west-138.railway.app:8077";
 
 // Stripe keys
-const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
-const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
+// const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
+// const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
 const plugins = [
